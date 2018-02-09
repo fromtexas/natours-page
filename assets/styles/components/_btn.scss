@@ -1,0 +1,94 @@
+.btn{
+
+    &:active, &:focus{
+        outline: none;
+        transform: translateY(-.1rem) !important;
+        box-shadow: 0 .5rem 1rem rgba($black, .2);
+    }
+
+    &, &:link, &:visited{
+        text-transform: uppercase;
+        text-decoration: none;
+        position: relative;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        font-size: $default-font-size;
+
+        border: none;
+        cursor: pointer;
+
+        &:hover{
+            transform: translateY(-.3rem);
+            box-shadow: 0 1rem 2rem rgba($black, .2);
+            &::after{
+                transform: scaleX(1.4) scaleY(1.6);
+                opacity: 0;
+            }
+        }
+        &::after{
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            border-radius: 10rem;
+            z-index: -1;
+            transition: all .4s;
+        }
+    }
+
+    &--white{
+        background-color: $white;
+        color: $gray;
+        &::after{
+            background-color: $white;
+        }
+    }
+
+    &--green{
+        background-color: $Medium-green;
+        color: $white;
+        &::after{
+            background-color: $Medium-green;
+        }
+    }
+
+    &--animated{
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+}
+
+.btn-text{
+    &:link,
+    &:visited{
+        color: $Medium-green;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $Medium-green;
+        padding: 3px;
+        font-size: $default-font-size;
+        transition: all .2s;
+        font-weight: 700;
+    }
+
+    &:hover{
+        background-color: $Medium-green;
+        color: $white;
+        box-shadow: 0 1rem 2rem rgba($black, .15);
+        transform: translateY(-2px);
+    }
+
+    &:active{
+        box-shadow: 0 .5rem 1rem rgba($black, .15);
+        transform: translateY(0);
+    }
+}
+
+
+
+

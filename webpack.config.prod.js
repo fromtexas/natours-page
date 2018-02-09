@@ -40,7 +40,7 @@ module.exports = {
         new ExtractTextPlugin('[name].[contenthash].css'),
         new HtmlWebpackPlugin({
           template: path.join(__dirname, 'index.ejs'),
-          favicon: 'favicon.ico',
+          favicon: 'favicon.png',
           minify: {
             removeComments: true,
             collapseWhitespace: true,
